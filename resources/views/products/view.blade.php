@@ -7,5 +7,7 @@
 </head>
 <body>
     <h1>Products view</h1>
+    <p>{{ $title }}</p>
+    <p>{{ $createdBy }}</p>
 </body>
 </html>
