@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Routet that returns a wrong view - GET - generate error
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/products',[ProductsController::class,'index']);
