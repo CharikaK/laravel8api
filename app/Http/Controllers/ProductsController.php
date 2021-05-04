@@ -15,12 +15,20 @@ class ProductsController extends Controller
             'productTwo' => 'Samsung'
         ];
 
-        return view('products.view')->with('data',$data);
+        
         // Compact ()
         // return view('products.view',compact('title','createdBy'));
 
         //with() - best when passing one variable
         //return view('products.view')->with('title',$title)->with('createdBy',$createdBy);
+
+        // with() - an array
+        // return view('products.view')->with('data',$data);
+
+        // directly to view
+        return view('products.view', [
+            'data'=>$data
+        ]);
     }
 
     public function about(){
