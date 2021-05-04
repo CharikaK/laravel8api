@@ -13,30 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Routet that returns a view - GET
+// Routet that returns a wrong view - GET - generate error
 Route::get('/', function () {
-    return view('welcome');
-});
-
-// Route returns message = echo - GET
-Route::get('/users',function(){
-    return 'Welcome to users GET';
-});
-
-// Route returns an ARRAY - GET
-Route::get('/users',function(){
-    return ['PHP','HTML','LARAVEL'];
-});
-
-// Route returns an JSON - GET
-Route::get('/users',function(){
-    return response()->json([
-        'name'=>'Dary',
-        'course' =>'Laravel Biginners to Advanced'
-    ]);
-});
-
-// Route redirect to home - GET
-Route::get('/users',function(){
-    return redirect('/');
+    return view('home');
 });

@@ -40,3 +40,7 @@ Route::get('/users',function(){
 Route::get('/users',function(){
     return redirect('/');
 });
+// Routet that returns a wrong view - GET - generate error
+Route::get('/', function () {
+    return view('home');
+});
