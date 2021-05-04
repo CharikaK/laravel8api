@@ -7,7 +7,10 @@
 </head>
 <body>
     <h1>Products view</h1>
-    <p>{{ $title }}</p>
-    <p>{{ $createdBy }}</p>
+    @foreach ($data as $item)
+        <p>{{ $item }}</p>
+    @endforeach
+        
+    
 </body>
 </html>
