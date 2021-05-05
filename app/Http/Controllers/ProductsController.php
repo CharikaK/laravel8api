@@ -34,4 +34,18 @@ class ProductsController extends Controller
     public function about(){
         return 'About the product';
     }
+
+    public function showId($id){
+        return $id;
+    }
+
+    public function showName($name){
+        $data=[
+            'iPhone' => 'iPhone',
+            'Samsung' => 'Samsung'
+        ];
+        //return $data; // worked - display JSON array
+        // return the value of the key. Key is passed by reqest GET data
+        return view('products.view',['products'=>$data[$name]]);
+    }
 }
