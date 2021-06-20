@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 class ProductsController extends Controller
 {
     public function index(){
+        // route('name of the path')  
+        print_r(route('procuts'));
+        return view('products.view');
+
+        /*  
         $title = 'Welcome to Laravel 8';
         $createdBy = 'Charika';
         
@@ -14,7 +19,7 @@ class ProductsController extends Controller
             'productOne' => 'iPhone',
             'productTwo' => 'Samsung'
         ];
-
+        */
         
         // Compact ()
         // return view('products.view',compact('title','createdBy'));
@@ -26,9 +31,11 @@ class ProductsController extends Controller
         // return view('products.view')->with('data',$data);
 
         // directly to view
+        /* 
         return view('products.view', [
             'data'=>$data
-        ]);
+        ]); 
+        */
     }
 
     public function about(){
@@ -37,8 +44,7 @@ class ProductsController extends Controller
 
     // better to use the same parameter name everywhere for convenience
     public function showId($id){
-        echo "reached";
-        return $id;
+           return $id;
     }
 
     public function showName($name){ 

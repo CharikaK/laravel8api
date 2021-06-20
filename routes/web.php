@@ -16,7 +16,8 @@ use App\Http\Controllers\ProductsController;
 
 // Route that returns a wrong view - GET - generate error
 // to get all the products
-Route::get('/products',[ProductsController::class,'index']);
+Route::get('/products',
+    [ProductsController::class,'index'])->name('procuts');
 
 Route::get('/products/about',[ProductsController::class,'about']);
 // Before Laravel 8 - this will not work on 8

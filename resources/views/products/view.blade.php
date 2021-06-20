@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Products view</h1>
+    <a href="{{ route('procuts') }}">Products </a>
    {{--
      if you pass the whole array = return $data;
      Then you have to loop through the array
@@ -21,8 +22,9 @@
 
     {{-- retruning a key value 
         showName()
+        <p>{{ $products }}</p>
     --}}
-    <p>{{ $products }}</p>
+    
     
         
     
