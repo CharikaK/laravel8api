@@ -7,9 +7,23 @@
 </head>
 <body>
     <h1>Products view</h1>
+   {{--
+     if you pass the whole array = return $data;
+     Then you have to loop through the array
+     Out put is a JSON array
+     showName() 
+
     @foreach ($data as $item)
         <p>{{ $item }}</p>
-    @endforeach
+    @endforeach 
+
+    --}}
+
+    {{-- retruning a key value 
+        showName()
+    --}}
+    <p>{{ $products }}</p>
+    
         
     
 </body>
