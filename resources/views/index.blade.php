@@ -20,6 +20,9 @@
         <div class="container-grid-4">
             {{-- print_r(URL('')) --}}
         <div>
+            {{-- asset() is to bring any css, js or images.
+                 it will look ONLY inside the public fiolder 
+                <img src="{{ asset('storage/icon-box.jpg') }}" alt=""> --}}
             <img src="{{ URL('storage/icon-box.jpg') }}" alt="">
             <h2>
                 Web Design
