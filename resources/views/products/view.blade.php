@@ -25,8 +25,7 @@
         <p>{{ $products }}</p>
     --}}
     
-    
-        
+  
     
 </body>
 </html>

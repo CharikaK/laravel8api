@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,11 @@ use App\Http\Controllers\ProductsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// branch - views
+Route::get('/', [PagesController::class,'index'] );
+Route::get('/about', [PagesController::class,'about']);
+// -----------
 
 // Route that returns a wrong view - GET - generate error
 // to get all the products
