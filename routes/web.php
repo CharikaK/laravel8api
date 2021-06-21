@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,9 @@ use App\Http\Controllers\PagesController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Databases and migrations
+Route::get('/posts',[PostController::class,'index']);
 
 // branch - views
 Route::get('/', [PagesController::class,'index'] );
