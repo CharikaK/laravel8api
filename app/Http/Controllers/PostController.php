@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index()
-    {
+    public function index(){
+
         return view('posts/index');
+        // return view('posts.index'); Before Laravel 8
     }
 }

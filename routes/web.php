@@ -20,7 +20,7 @@ use App\Http\Controllers\PostController;
 // Databases and migrations
 Route::get('/posts',[PostController::class,'index']);
 
-// branch - views
+/* // branch - views
 Route::get('/', [PagesController::class,'index'] );
 Route::get('/about', [PagesController::class,'about']);
 // -----------
@@ -67,5 +67,5 @@ Route::get('products/showName/{name}/{id}',
                 );
 
 // ** GET - to use either {id} or {name} as parameters, then better to have two functions
-
+ */
 
