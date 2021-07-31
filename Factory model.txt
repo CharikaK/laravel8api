@@ -1,0 +1,51 @@
+We can insert fake data to the Database using a PHP library called Faker.
+We have to use a Factory class to use the faker library.
+Using faker library we can generate fake data into the database table.
+
+Factory file is in database\factories
+
+Method 01 To create the Factory
+>>> php artisan make:factory PostFactory
+Here the system will decide to use Post Model
+
+Method 02 Creating the Fatory using a specific Model
+>>> php artisan make:factory PostFactory --model=User
+
+----------------------------------------------------------------------
+Step 01 Creating the Factory file for the post table 
+>>> php artisan make:factory PostFactory --model=Post
+database\factories\PostFactory.php
+
+Step 02 setup the definition()
+return [
+            'title' => $this->faker->title,
+            'body' => $this->faker->paragraph,
+            'created_at' => now(),
+        ];
+
+
+Step 03 Bring Str
+[6] use Illuminate\Support\Str;
+
+Step 04 Full path to model 
+** \APP should start with \. This is the root folder.
+[16] \App\Models\Post::class;
+
+Step 05 php artisan tinker
+Step 06 \App\Model\Post::factory()->create();
+Step 07 \App\Model\Post::factory()->count(5)->create();
+----------------------------------------------------------------------
+
+Handling Errors
+Error:
+When you trying to run Step 06 / Step 07 on Tinker, if you get an error msg simillar to bellow
+"PHP Error:  Class 'Database\Factories\App\Models\Post' not found in C:\xampp\htdocs\Workspace\laravelInterviewPrep\testApp\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Factories\Factory.php on line 62"
+Solution: Come out of Tinker and run "Composer dump"
+
+Error:
+Illuminate\Database\QueryException with message 'SQLSTATE[HY000] [2002] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because 
+connected host has failed to respond.
+ (SQL: insert into `posts` (`title`, `body`, `created_at`, `updated_at`) values (Prof., Assumenda ea quisquam ducimus corrupti aut blanditiis. Cupiditate labore sit ex., 2021-07-31 08:03:09, 2021-07-31 08:03:09))' 
+
+Solution:
+start XAMP database connetion
