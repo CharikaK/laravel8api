@@ -1,0 +1,12 @@
+Query builder is to create SQLs statements. We can either select a row or select the whole table.
+
+Step 01: use Illuminate\Support\Facades\DB;
+Step 02: write the SQLs
+
+In this example I have taken PostController.php, index()
+
+Example 01:
+public function index(){
+        $post=DB::select('SELECT * FROM posts');
+        dd($post);        
+    }
