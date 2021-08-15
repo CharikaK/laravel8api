@@ -32,8 +32,10 @@ Step 04 Full path to model
 [16] \App\Models\Post::class;
 
 Step 05 php artisan tinker
-Step 06 \App\Model\Post::factory()->create();
-Step 07 \App\Model\Post::factory()->count(5)->create();
+Step 06 type below in shell to create one record
+    \App\Models\Post::factory()->create();
+Step 07 type below in shell to create n records
+    \App\Models\Post::factory()->count(5)->create();
 ----------------------------------------------------------------------
 
 Handling Errors
