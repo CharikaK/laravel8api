@@ -24,3 +24,70 @@ $id =7;
         $post = DB::table('posts')
             ->where('id',$id)
             ->get();
+
+Example 05 - get all the records only one column 
+$post = DB::table('posts')
+            ->select('body')
+            ->get();
+
+Example 06
+$post = DB::table('posts')
+            ->where('created_at', '>', now()->subDay())
+            ->get();
+Example 06
+Select title, remove duplicate
+$post = DB::table('posts')
+            ->select('title')
+            ->distinct()
+            ->get();
+
+Example 07 - created_at,title=prof.
+$post = DB::table('posts')
+            ->where('created_at', '>', now()->subDay())
+            ->orWhere('title','Prof.')
+            ->get();
+
+Example 08 - created_at,id between 3-9
+$post = DB::table('posts')
+            ->where('created_at', '>', now()->subDay())
+            ->whereBetween('id',[3,9])
+            ->get();
+
+
+Example 09 - Created today, id not null
+$post = DB::table('posts')
+            ->where('created_at', '>', now()->subDay())
+            ->whereNotNull('title')
+            ->get();
+
+
+Example 10 - Select title, remove duplicate
+$post = DB::table('posts')
+            ->select('title')
+            ->distinct()
+            ->get();
+
+Example 11 - order by
+$post = DB::table('posts')
+            ->orderBy('title','asc')
+            ->get();
+
+Example 12 - created latest
+$post = DB::table('posts')
+            ->latest()
+            ->get();
+
+Example 13 - created latest
+$post = DB::table('posts')
+            ->latest()
+            ->get();
+
+Example 14 - created oldest
+$post = DB::table('posts')
+            ->oldest()
+            ->get();
+
+Example 15 - inRandomOrder
+$post = DB::table('posts')
+            ->inRandomOrder()
+            ->get();
