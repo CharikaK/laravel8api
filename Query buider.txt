@@ -91,3 +91,37 @@ Example 15 - inRandomOrder
 $post = DB::table('posts')
             ->inRandomOrder()
             ->get();
+
+Returning methods if you do not add the return method, it will return Instance of the query
+first()
+$post = DB::table('posts')
+            ->orderBy('created_at','desc')
+            ->first();
+find()
+$post = DB::table('posts')
+            ->find($id);
+ 
+count() where id is 7
+$post = DB::table('posts')
+            ->where('id',$id)
+            ->count();
+ 
+count() *
+$post = DB::table('posts')
+            ->count();
+ 
+max()
+$post = DB::table('posts')
+            ->max('id');
+ 
+min()
+$post = DB::table('posts')
+            ->min('id');
+ 
+sum()
+$post = DB::table('posts')
+            ->sum('id');
+ 
+avg()
+$post = DB::table('posts')
+            ->avg('id');
