@@ -1,7 +1,11 @@
 Query builder is to create SQLs statements. We can either select a row or select the whole table.
 
+$post=DB::select('SELECT * FROM posts') will return a Std class 
+
+
 Step 01: use Illuminate\Support\Facades\DB;
 Step 02: write the SQLs
+
 
 In this example I have taken PostController.php, index()
 
@@ -10,3 +14,7 @@ public function index(){
         $post=DB::select('SELECT * FROM posts');
         dd($post);        
     }
+
+Example 02 & 03:
+$post=DB::select('select * from posts where id= ?', [7]);
+$post=DB::select('select * from posts where id= :id', ['id'=> 7]);
